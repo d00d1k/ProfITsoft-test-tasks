@@ -31,7 +31,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dFl-eJ-i4x">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sticker-png-question-mark-desktop-computer-icons-question-mark-miscellaneous-angle-thumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="dFl-eJ-i4x">
                                             <rect key="frame" x="142.5" y="9" width="129" height="129"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="dFl-eJ-i4x" secondAttribute="height" multiplier="1:1" id="sfj-oP-ljR"/>
@@ -39,9 +39,11 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="dFl-eJ-i4x" firstAttribute="centerY" secondItem="q6y-uh-1ZD" secondAttribute="centerY" id="AbO-VE-Get"/>
+                                        <constraint firstItem="dFl-eJ-i4x" firstAttribute="top" secondItem="q6y-uh-1ZD" secondAttribute="top" constant="9" id="C1T-mR-sX4"/>
+                                        <constraint firstAttribute="trailing" secondItem="dFl-eJ-i4x" secondAttribute="trailing" constant="142.5" id="Cti-lO-4pK"/>
                                         <constraint firstItem="dFl-eJ-i4x" firstAttribute="top" secondItem="q6y-uh-1ZD" secondAttribute="topMargin" constant="-2" id="Q4l-NN-kKP"/>
-                                        <constraint firstItem="dFl-eJ-i4x" firstAttribute="centerX" secondItem="q6y-uh-1ZD" secondAttribute="centerX" id="iFQ-zo-E2J"/>
+                                        <constraint firstAttribute="bottom" secondItem="dFl-eJ-i4x" secondAttribute="bottom" constant="9" id="aqQ-gI-JYv"/>
+                                        <constraint firstItem="dFl-eJ-i4x" firstAttribute="leading" secondItem="q6y-uh-1ZD" secondAttribute="leading" constant="142.5" id="pLi-Li-aBQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -175,9 +177,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6I-1Z-lKf">
-                                            <rect key="frame" x="20" y="11" width="77" height="25"/>
+                                            <rect key="frame" x="20" y="11" width="90" height="25"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="v6I-1Z-lKf" secondAttribute="height" multiplier="77:25" id="MtD-fJ-bWi"/>
+                                                <constraint firstAttribute="width" secondItem="v6I-1Z-lKf" secondAttribute="height" multiplier="77:25" constant="13" id="MtD-fJ-bWi"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -200,7 +202,7 @@
                                         <constraint firstItem="v6I-1Z-lKf" firstAttribute="top" secondItem="yPN-xM-Xs4" secondAttribute="top" constant="11" id="W52-Cv-avz"/>
                                         <constraint firstItem="GeT-o5-Epf" firstAttribute="top" secondItem="v6I-1Z-lKf" secondAttribute="bottom" constant="3" id="faM-NF-ueX"/>
                                         <constraint firstAttribute="trailing" secondItem="GeT-o5-Epf" secondAttribute="trailing" constant="312" id="jzS-yJ-Zoc"/>
-                                        <constraint firstAttribute="trailing" secondItem="v6I-1Z-lKf" secondAttribute="trailing" constant="317" id="z94-YU-On8"/>
+                                        <constraint firstAttribute="trailing" secondItem="v6I-1Z-lKf" secondAttribute="trailing" constant="304" id="z94-YU-On8"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -274,6 +276,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="sticker-png-question-mark-desktop-computer-icons-question-mark-miscellaneous-angle-thumbnail" width="370" height="370"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
