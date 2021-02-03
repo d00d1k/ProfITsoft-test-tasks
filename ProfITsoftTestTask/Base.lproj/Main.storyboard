@@ -31,17 +31,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dFl-eJ-i4x">
-                                            <rect key="frame" x="142.5" y="9" width="129" height="129"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sticker-png-question-mark-desktop-computer-icons-question-mark-miscellaneous-angle-thumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="dFl-eJ-i4x">
+                                            <rect key="frame" x="143" y="9" width="129" height="127"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="dFl-eJ-i4x" secondAttribute="height" multiplier="1:1" id="sfj-oP-ljR"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="dFl-eJ-i4x" firstAttribute="centerY" secondItem="q6y-uh-1ZD" secondAttribute="centerY" id="AbO-VE-Get"/>
+                                        <constraint firstAttribute="bottom" secondItem="dFl-eJ-i4x" secondAttribute="bottom" constant="11" id="DDs-Vi-pxf"/>
+                                        <constraint firstItem="dFl-eJ-i4x" firstAttribute="leading" secondItem="q6y-uh-1ZD" secondAttribute="leading" constant="143" id="PiK-Wk-OOF"/>
+                                        <constraint firstAttribute="trailing" secondItem="dFl-eJ-i4x" secondAttribute="trailing" constant="142" id="PwW-O5-8L8"/>
                                         <constraint firstItem="dFl-eJ-i4x" firstAttribute="top" secondItem="q6y-uh-1ZD" secondAttribute="topMargin" constant="-2" id="Q4l-NN-kKP"/>
-                                        <constraint firstItem="dFl-eJ-i4x" firstAttribute="centerX" secondItem="q6y-uh-1ZD" secondAttribute="centerX" id="iFQ-zo-E2J"/>
+                                        <constraint firstItem="dFl-eJ-i4x" firstAttribute="top" secondItem="q6y-uh-1ZD" secondAttribute="top" constant="9" id="XkW-Ee-Azd"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -136,8 +138,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="PUq-Gz-7wb">
-                                            <rect key="frame" x="0.0" y="73" width="414" height="122"/>
+                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="PUq-Gz-7wb">
+                                            <rect key="frame" x="0.0" y="73" width="414" height="98"/>
                                             <connections>
                                                 <action selector="birthdayDayPicker:" destination="ars-tX-cUM" eventType="valueChanged" id="Yng-e0-0gG"/>
                                             </connections>
@@ -146,7 +148,7 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="PUq-Gz-7wb" secondAttribute="trailing" id="0J4-pB-LGE"/>
                                         <constraint firstItem="PUq-Gz-7wb" firstAttribute="top" secondItem="fJJ-uM-Bnd" secondAttribute="bottom" constant="8" symbolic="YES" id="1DO-cN-h85"/>
-                                        <constraint firstAttribute="bottom" secondItem="PUq-Gz-7wb" secondAttribute="bottom" constant="5" id="EkG-cT-63u"/>
+                                        <constraint firstAttribute="bottom" secondItem="PUq-Gz-7wb" secondAttribute="bottom" constant="29" id="EkG-cT-63u"/>
                                         <constraint firstItem="fJJ-uM-Bnd" firstAttribute="leading" secondItem="Kk1-2M-eJW" secondAttribute="leading" constant="20" id="LhH-Jt-htY"/>
                                         <constraint firstAttribute="trailing" secondItem="fJJ-uM-Bnd" secondAttribute="trailing" constant="288" id="f2Y-qR-xzW"/>
                                         <constraint firstItem="fJJ-uM-Bnd" firstAttribute="top" secondItem="Kk1-2M-eJW" secondAttribute="top" constant="11" id="l2R-GR-n3p"/>
@@ -162,9 +164,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6I-1Z-lKf">
-                                            <rect key="frame" x="20" y="11" width="77" height="25"/>
+                                            <rect key="frame" x="20" y="11" width="103" height="25"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="v6I-1Z-lKf" secondAttribute="height" multiplier="77:25" id="MtD-fJ-bWi"/>
+                                                <constraint firstAttribute="width" secondItem="v6I-1Z-lKf" secondAttribute="height" multiplier="77:25" constant="26" id="MtD-fJ-bWi"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -187,7 +189,7 @@
                                         <constraint firstItem="v6I-1Z-lKf" firstAttribute="top" secondItem="yPN-xM-Xs4" secondAttribute="top" constant="11" id="W52-Cv-avz"/>
                                         <constraint firstItem="GeT-o5-Epf" firstAttribute="top" secondItem="v6I-1Z-lKf" secondAttribute="bottom" constant="3" id="faM-NF-ueX"/>
                                         <constraint firstAttribute="trailing" secondItem="GeT-o5-Epf" secondAttribute="trailing" constant="312" id="jzS-yJ-Zoc"/>
-                                        <constraint firstAttribute="trailing" secondItem="v6I-1Z-lKf" secondAttribute="trailing" constant="317" id="z94-YU-On8"/>
+                                        <constraint firstAttribute="trailing" secondItem="v6I-1Z-lKf" secondAttribute="trailing" constant="291" id="z94-YU-On8"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -261,6 +263,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="sticker-png-question-mark-desktop-computer-icons-question-mark-miscellaneous-angle-thumbnail" width="370" height="370"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
