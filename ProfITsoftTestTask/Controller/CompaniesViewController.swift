@@ -22,10 +22,10 @@ class CompaniesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
-    // MARK: - Table view data source
+    }   
+}
+
+extension CompaniesViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return companiesArray.count

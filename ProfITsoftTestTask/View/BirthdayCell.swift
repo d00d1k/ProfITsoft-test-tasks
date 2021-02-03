@@ -8,8 +8,13 @@
 import UIKit
 
 class BirthdayCell: UITableViewCell {
-
-    @IBAction func birthdayDayPicker(_ sender: Any) {
-    }
     
+    static var birthdayFromDAyPicker = NSDate()
+    
+    @IBOutlet weak var birthdayOutlet: UIDatePicker!
+    
+    @IBAction func birthdayDayPicker(_ sender: UIDatePicker) {
+        
+        BirthdayCell.birthdayFromDAyPicker = birthdayOutlet.date as NSDate
+    }
 }

@@ -59,6 +59,10 @@
                                             <rect key="frame" x="20" y="70" width="374" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="getNameFromTextField" destination="lvG-dg-kgI" eventType="editingChanged" id="FTj-IU-hN6"/>
+                                                <action selector="getNameFromTextField" destination="lvG-dg-kgI" eventType="editingDidEnd" id="G15-qg-kq6"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8u-RD-8UB">
                                             <rect key="frame" x="20" y="11" width="70" height="51"/>
@@ -81,7 +85,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="nameTextField" destination="VuE-27-Ops" id="9Rd-Kz-0BN"/>
+                                    <outlet property="nameTextField" destination="VuE-27-Ops" id="7Eo-EY-zOo"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LastnameCell" rowHeight="118" id="3DY-FI-JeE" customClass="LastnameCell" customModule="ProfITsoftTestTask" customModuleProvider="target">
@@ -95,6 +99,10 @@
                                             <rect key="frame" x="20" y="70" width="374" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="getLastnameFromTextField" destination="3DY-FI-JeE" eventType="editingChanged" id="9pm-Ht-sob"/>
+                                                <action selector="getLastnameFromTextField" destination="3DY-FI-JeE" eventType="editingDidEnd" id="g0Z-sB-pEC"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYr-mH-vH0">
                                             <rect key="frame" x="20" y="11" width="88" height="51"/>
@@ -136,10 +144,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="PUq-Gz-7wb">
+                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="PUq-Gz-7wb">
                                             <rect key="frame" x="0.0" y="73" width="414" height="122"/>
                                             <connections>
                                                 <action selector="birthdayDayPicker:" destination="ars-tX-cUM" eventType="valueChanged" id="Yng-e0-0gG"/>
+                                                <action selector="birthdayDayPicker:" destination="h2y-Hs-FSU" eventType="editingChanged" id="ah8-Je-vjy"/>
+                                                <action selector="birthdayDayPicker:" destination="h2y-Hs-FSU" eventType="valueChanged" id="iAl-MT-z6r"/>
                                             </connections>
                                         </datePicker>
                                     </subviews>
@@ -153,6 +163,9 @@
                                         <constraint firstItem="PUq-Gz-7wb" firstAttribute="leading" secondItem="Kk1-2M-eJW" secondAttribute="leading" id="vKa-cn-HEu"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="birthdayOutlet" destination="PUq-Gz-7wb" id="QLV-Tx-X1c"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CompanyCell" rowHeight="71" id="h97-Nf-6rH" customClass="CompanyCell" customModule="ProfITsoftTestTask" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="608" width="414" height="71"/>

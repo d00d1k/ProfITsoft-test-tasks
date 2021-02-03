@@ -7,13 +7,19 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class NewWorkerViewController: UITableViewController {
     
+    var worker: [WorkerEntity] = []
     var selectedCompany = String()
+    
+    let nameCell = NameCell()
+    let dataManager = DataManager()
     
     @IBAction func saveButton(_ sender: Any) {
         alertMessage()
+        saveWorker()
     }
     
     override func viewDidLoad() {
@@ -37,6 +43,20 @@ class NewWorkerViewController: UITableViewController {
                 
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    private func saveWorker() {
+        
+        let workersDictionary: [String: Any] = [
+        
+            "imageURL": "No URL",
+            "name": NameCell.nameFromTextField,
+            "lastname": LastnameCell.lastnameFromTextField,
+            "birthday": BirthdayCell.birthdayFromDAyPicker,
+            "company": CompanyCell.chosenCompany
+        ]
+        
+        DataManager.instance.saveData(workersDictionary)
     }
 }
  

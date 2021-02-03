@@ -9,11 +9,14 @@ import UIKit
 
 class CompanyCell: UITableViewCell {
     
+    static var chosenCompany: String = "None"
+    
     @IBOutlet weak var companyName: UILabel!
     
     func configureCell(_ companyName: String) {
         
         self.companyName.text = companyName
         
+        CompanyCell.chosenCompany = companyName
     }
 }

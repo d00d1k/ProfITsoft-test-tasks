@@ -19,6 +19,8 @@
 		EB0BB23F25C84590005DFD7C /* BirthdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0BB23E25C84590005DFD7C /* BirthdayCell.swift */; };
 		EB0BB24225C845E7005DFD7C /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0BB24125C845E7005DFD7C /* CompanyCell.swift */; };
 		EB0BB24925C85087005DFD7C /* CompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0BB24825C85087005DFD7C /* CompaniesViewController.swift */; };
+		EB141ED825C987BD001A422A /* ProfITsoftTestTaskCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB141ED625C987BD001A422A /* ProfITsoftTestTaskCoreData.xcdatamodeld */; };
+		EB5E54AD25C992DE000BD8E0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5E54AC25C992DE000BD8E0 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		EB0BB23E25C84590005DFD7C /* BirthdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayCell.swift; sourceTree = "<group>"; };
 		EB0BB24125C845E7005DFD7C /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
 		EB0BB24825C85087005DFD7C /* CompaniesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesViewController.swift; sourceTree = "<group>"; };
+		EB141ED725C987BD001A422A /* ProfITsoftTestTaskCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProfITsoftTestTaskCoreData.xcdatamodel; sourceTree = "<group>"; };
+		EB5E54AC25C992DE000BD8E0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +74,10 @@
 			children = (
 				EB0BB24625C84646005DFD7C /* Controller */,
 				EB0BB24425C8463F005DFD7C /* View */,
+				EB5E54AC25C992DE000BD8E0 /* DataManager.swift */,
 				EB0BB21F25C825D4005DFD7C /* Main.storyboard */,
 				EB0BB23125C82637005DFD7C /* Support Files */,
+				EB141ED625C987BD001A422A /* ProfITsoftTestTaskCoreData.xcdatamodeld */,
 			);
 			path = ProfITsoftTestTask;
 			sourceTree = "<group>";
@@ -93,9 +99,9 @@
 			children = (
 				EB0BB23525C84424005DFD7C /* ImageCell.swift */,
 				EB0BB23825C844F6005DFD7C /* NameCell.swift */,
+				EB0BB23B25C84558005DFD7C /* LastnameCell.swift */,
 				EB0BB23E25C84590005DFD7C /* BirthdayCell.swift */,
 				EB0BB24125C845E7005DFD7C /* CompanyCell.swift */,
-				EB0BB23B25C84558005DFD7C /* LastnameCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +192,8 @@
 				EB0BB23625C84424005DFD7C /* ImageCell.swift in Sources */,
 				EB0BB21C25C825D4005DFD7C /* SceneDelegate.swift in Sources */,
 				EB0BB24925C85087005DFD7C /* CompaniesViewController.swift in Sources */,
+				EB141ED825C987BD001A422A /* ProfITsoftTestTaskCoreData.xcdatamodeld in Sources */,
+				EB5E54AD25C992DE000BD8E0 /* DataManager.swift in Sources */,
 				EB0BB23925C844F6005DFD7C /* NameCell.swift in Sources */,
 				EB0BB22F25C8261E005DFD7C /* NewWorkerViewController.swift in Sources */,
 			);
@@ -387,6 +395,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EB141ED625C987BD001A422A /* ProfITsoftTestTaskCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EB141ED725C987BD001A422A /* ProfITsoftTestTaskCoreData.xcdatamodel */,
+			);
+			currentVersion = EB141ED725C987BD001A422A /* ProfITsoftTestTaskCoreData.xcdatamodel */;
+			path = ProfITsoftTestTaskCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EB0BB20E25C825D4005DFD7C /* Project object */;
 }
