@@ -11,11 +11,10 @@ import CoreData
 
 class NewWorkerViewController: UITableViewController {
     
+    static let shared = NewWorkerViewController()
+    
     var worker: [WorkerEntity] = []
     var selectedCompany = String()
-    
-    let nameCell = NameCell()
-    let dataManager = DataManager()
     
     @IBAction func saveButton(_ sender: Any) {
         alertMessage()
@@ -49,7 +48,7 @@ class NewWorkerViewController: UITableViewController {
         
         let workersDictionary: [String: Any] = [
         
-            "imageURL": "No URL",
+            "imageURL": ImageCell.imageFromImageCell,
             "name": NameCell.nameFromTextField,
             "lastname": LastnameCell.lastnameFromTextField,
             "birthday": BirthdayCell.birthdayFromDAyPicker,
@@ -71,6 +70,7 @@ extension NewWorkerViewController {
         if indexPath.row == 0 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell") as! ImageCell
+            
             return cell
             
         } else if indexPath.row == 1 {
@@ -103,4 +103,3 @@ extension NewWorkerViewController {
         
     }
 }
-

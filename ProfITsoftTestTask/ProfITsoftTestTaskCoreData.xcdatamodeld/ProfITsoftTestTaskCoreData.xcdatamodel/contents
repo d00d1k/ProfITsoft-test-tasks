@@ -3,7 +3,7 @@
     <entity name="WorkerEntity" representedClassName="WorkerEntity" syncable="YES" codeGenerationType="class">
         <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="company" optional="YES" attributeType="String"/>
-        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="imageURL" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="second_name" optional="YES" attributeType="String"/>
     </entity>

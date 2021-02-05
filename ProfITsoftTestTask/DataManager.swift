@@ -19,7 +19,7 @@ class DataManager {
         
         let workers = NSEntityDescription.insertNewObject(forEntityName: "WorkerEntity", into: context!) as! WorkerEntity
         
-        workers.setValue(dictionary["imageURL"] as! String, forKey: "imageURL")
+        workers.setValue(dictionary["imageURL"] as! Data, forKey: "imageURL")
         workers.setValue(dictionary["name"] as! String, forKey: "name")
         workers.setValue(dictionary["lastname"] as! String, forKey: "second_name")
         workers.setValue(dictionary["birthday"] as! NSDate, forKey: "birthday")

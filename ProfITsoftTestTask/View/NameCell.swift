@@ -16,7 +16,6 @@ class NameCell: UITableViewCell {
     
     @IBAction func getNameFromTextField() {
         NameCell.nameFromTextField = returnNameFromTextfield(optionalName: nameTextField?.text)
-        print(NameCell.nameFromTextField)
     }
     
     func returnNameFromTextfield(optionalName: String?) -> String {
