@@ -33,4 +33,27 @@ class DataManager {
             print("Data is not save")
         }
     }
+    
+    func fetchData() -> [WorkerEntity]    {
+        
+        var workersEntity = [WorkerEntity]()
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "WorkerEntity")
+        
+        do {
+            workersEntity = try context?.fetch(fetchRequest) as! [WorkerEntity]
+            
+            for workers in 0..<workersEntity.count {
+                let data = workersEntity[workers]
+                print("name \(data.value(forKey: "name") ?? "No name")")
+                print("lastname \(data.value(forKey: "second_name") ?? "No lastname")")
+                print("birthday \(data.value(forKey: "birthday") ?? "No birthday")")
+                print("company \(data.value(forKey: "company") ?? "No company")")
+            }
+            
+        } catch let err {
+            print("Error fetch -: \(err.localizedDescription)")
+        }
+        return workersEntity
+    }
 }

@@ -20,3 +20,4 @@ class CompanyCell: UITableViewCell {
         CompanyCell.chosenCompany = companyName
     }
 }
+

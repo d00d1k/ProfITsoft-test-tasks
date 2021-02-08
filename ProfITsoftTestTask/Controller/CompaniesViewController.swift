@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol CompaniesViewControllerDelegate: AnyObject {
+    func dataReceive(data: String)
+}
+
 class CompaniesViewController: UITableViewController {
+    
+    weak var delegate: CompaniesViewControllerDelegate?
     
     private var companiesArray: [String] = [
     
@@ -18,8 +24,6 @@ class CompaniesViewController: UITableViewController {
         "Microsoft"
     ]
     
-    private var selectedCompany = String()
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }   
@@ -42,12 +46,8 @@ extension CompaniesViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        selectedCompany = companiesArray[indexPath.row]
+        delegate?.dataReceive(data: companiesArray[indexPath.row])
         
-        if let viewController = presentingViewController as? NewWorkerViewController {
-            dismiss(animated: true) {
-                viewController.returnCompany(company: self.selectedCompany)
-            }
-        }
+        self.navigationController?.popViewController(animated: true)
     }
 }

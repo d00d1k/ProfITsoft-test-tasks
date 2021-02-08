@@ -11,14 +11,15 @@ import CoreData
 
 class NewWorkerViewController: UITableViewController {
     
-    static let shared = NewWorkerViewController()
-    
-    var worker: [WorkerEntity] = []
-    var selectedCompany = String()
+    var selectedCompany: String = "None"
     
     @IBAction func saveButton(_ sender: Any) {
         alertMessage()
         saveWorker()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -27,17 +28,12 @@ class NewWorkerViewController: UITableViewController {
         tableView.delegate = self
     }
     
-    func returnCompany(company: String) {
-        
-        self.selectedCompany = company
-        self.tableView.reloadData()
-    }
-    
     private func alertMessage() {
         
         let alertController = UIAlertController(title: "", message: "Saving done ✅", preferredStyle: .alert)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction) in
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action:UIAlertAction) in
+            self.navigationController?.popViewController(animated: true)
         }
                 
         alertController.addAction(cancelAction)
@@ -102,4 +98,23 @@ extension NewWorkerViewController {
         }
         
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 4 {
+            
+            let companiesViewController = self.storyboard?.instantiateViewController(identifier: "CompaniesViewController") as! CompaniesViewController
+            
+            companiesViewController.delegate = self
+            
+            self.navigationController?.pushViewController(companiesViewController, animated: true)
+        }
+    }
 }
+
+extension NewWorkerViewController: CompaniesViewControllerDelegate {
+    func dataReceive(data: String) {
+        selectedCompany = data
+    }
+}
+

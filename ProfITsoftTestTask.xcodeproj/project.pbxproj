@@ -21,6 +21,10 @@
 		EB0BB24925C85087005DFD7C /* CompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0BB24825C85087005DFD7C /* CompaniesViewController.swift */; };
 		EB141ED825C987BD001A422A /* ProfITsoftTestTaskCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB141ED625C987BD001A422A /* ProfITsoftTestTaskCoreData.xcdatamodeld */; };
 		EB18799A25CB05D200495486 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB18799925CB05D200495486 /* NetworkManager.swift */; };
+		EB33D98625CD880A0027E1D0 /* WorkersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33D98525CD880A0027E1D0 /* WorkersListViewController.swift */; };
+		EB33D98A25CD88EB0027E1D0 /* CompaniesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33D98925CD88EB0027E1D0 /* CompaniesListViewController.swift */; };
+		EB33D98E25CDB3A00027E1D0 /* WorkerInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33D98D25CDB3A00027E1D0 /* WorkerInformationCell.swift */; };
+		EB33D99125CDD2AE0027E1D0 /* WorkerDetailedInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33D99025CDD2AE0027E1D0 /* WorkerDetailedInformationViewController.swift */; };
 		EB5E54AD25C992DE000BD8E0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5E54AC25C992DE000BD8E0 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,10 @@
 		EB0BB24825C85087005DFD7C /* CompaniesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesViewController.swift; sourceTree = "<group>"; };
 		EB141ED725C987BD001A422A /* ProfITsoftTestTaskCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProfITsoftTestTaskCoreData.xcdatamodel; sourceTree = "<group>"; };
 		EB18799925CB05D200495486 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EB33D98525CD880A0027E1D0 /* WorkersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkersListViewController.swift; sourceTree = "<group>"; };
+		EB33D98925CD88EB0027E1D0 /* CompaniesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesListViewController.swift; sourceTree = "<group>"; };
+		EB33D98D25CDB3A00027E1D0 /* WorkerInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerInformationCell.swift; sourceTree = "<group>"; };
+		EB33D99025CDD2AE0027E1D0 /* WorkerDetailedInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerDetailedInformationViewController.swift; sourceTree = "<group>"; };
 		EB5E54AC25C992DE000BD8E0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +113,7 @@
 				EB0BB23B25C84558005DFD7C /* LastnameCell.swift */,
 				EB0BB23E25C84590005DFD7C /* BirthdayCell.swift */,
 				EB0BB24125C845E7005DFD7C /* CompanyCell.swift */,
+				EB33D98D25CDB3A00027E1D0 /* WorkerInformationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,7 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				EB0BB22E25C8261E005DFD7C /* NewWorkerViewController.swift */,
+				EB33D98525CD880A0027E1D0 /* WorkersListViewController.swift */,
 				EB0BB24825C85087005DFD7C /* CompaniesViewController.swift */,
+				EB33D98925CD88EB0027E1D0 /* CompaniesListViewController.swift */,
+				EB33D99025CDD2AE0027E1D0 /* WorkerDetailedInformationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,6 +207,7 @@
 				EB18799A25CB05D200495486 /* NetworkManager.swift in Sources */,
 				EB0BB23C25C84558005DFD7C /* LastnameCell.swift in Sources */,
 				EB0BB23F25C84590005DFD7C /* BirthdayCell.swift in Sources */,
+				EB33D99125CDD2AE0027E1D0 /* WorkerDetailedInformationViewController.swift in Sources */,
 				EB0BB21A25C825D4005DFD7C /* AppDelegate.swift in Sources */,
 				EB0BB24225C845E7005DFD7C /* CompanyCell.swift in Sources */,
 				EB0BB23625C84424005DFD7C /* ImageCell.swift in Sources */,
@@ -202,7 +215,10 @@
 				EB0BB24925C85087005DFD7C /* CompaniesViewController.swift in Sources */,
 				EB141ED825C987BD001A422A /* ProfITsoftTestTaskCoreData.xcdatamodeld in Sources */,
 				EB5E54AD25C992DE000BD8E0 /* DataManager.swift in Sources */,
+				EB33D98E25CDB3A00027E1D0 /* WorkerInformationCell.swift in Sources */,
+				EB33D98625CD880A0027E1D0 /* WorkersListViewController.swift in Sources */,
 				EB0BB23925C844F6005DFD7C /* NameCell.swift in Sources */,
+				EB33D98A25CD88EB0027E1D0 /* CompaniesListViewController.swift in Sources */,
 				EB0BB22F25C8261E005DFD7C /* NewWorkerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
