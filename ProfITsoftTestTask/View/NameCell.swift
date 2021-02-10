@@ -10,20 +10,17 @@ import Foundation
 
 class NameCell: UITableViewCell {
     
-    static var nameFromTextField = String()
+    var worker: WorkerModel?
     
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBAction func getNameFromTextField() {
-        NameCell.nameFromTextField = returnNameFromTextfield(optionalName: nameTextField?.text)
+        
+        worker?.name = nameTextField.text
     }
     
-    func returnNameFromTextfield(optionalName: String?) -> String {
+    func configureCell(_ model: WorkerModel) {
         
-        if let name = nameTextField.text {
-            return name
-        } else {
-            return "None"
-        }
+        self.worker = model
     }
 }

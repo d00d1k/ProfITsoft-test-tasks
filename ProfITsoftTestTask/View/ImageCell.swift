@@ -10,7 +10,7 @@ import UIKit
 
 class ImageCell: UITableViewCell {
     
-    static var imageFromImageCell = Data()
+    var worker: WorkerModel?
     
     @IBOutlet weak var imageOfProfile: UIImageView! {
         didSet {
@@ -19,7 +19,6 @@ class ImageCell: UITableViewCell {
     }
     
     override func awakeFromNib() {
-        
         super.awakeFromNib()
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
@@ -31,16 +30,25 @@ class ImageCell: UITableViewCell {
         
         DispatchQueue.global().async {
             
-            NetworkManager.shared.getData(from: URL(string: "https://picsum.photos/200")!) { (data, response, error) in
+            NetworkManager.shared.getData(from: URL(string: "https://picsum.photos/200")!) { [self] (data, response, error) in
+                worker?.imageURL = data
                 guard let data = data,
                       error == nil else { return }
                 
+                print("img\(worker?.imageURL)")
                 DispatchQueue.main.async() { [weak self] in
-                    ImageCell.imageFromImageCell = data
+                    //self?.worker?.imageURL = data
+                    print("name\(worker?.name)")
                     self?.imageOfProfile.image = UIImage(data: data)
                 }
+                
             }
         }
+    }
+    
+    func configureCell(_ model: WorkerModel) {
+        
+        self.worker = model
     }
 }
 

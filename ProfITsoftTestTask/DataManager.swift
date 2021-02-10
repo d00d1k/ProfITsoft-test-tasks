@@ -15,15 +15,50 @@ class DataManager {
     
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
-    func saveData(_ dictionary: [String: Any]) {
+//    func saveData(_ dictionary: [String: Any]) {
+//
+//        let workers = NSEntityDescription.insertNewObject(forEntityName: "WorkerEntity", into: context!) as! WorkerEntity
+//
+//        workers.setValue(dictionary["imageURL"] as! Data, forKey: "imageURL")
+//        workers.setValue(dictionary["name"] as! String, forKey: "name")
+//        workers.setValue(dictionary["lastname"] as! String, forKey: "second_name")
+//        workers.setValue(dictionary["birthday"] as! NSDate, forKey: "birthday")
+//        workers.setValue(dictionary["company"] as! String, forKey: "company")
+//
+//        do {
+//            try context?.save()
+//            print("Data is saved")
+//
+//        } catch {
+//            print("Data is not save")
+//        }
+//    }
+    
+    func saveData(_ worker: WorkerModel) {
         
         let workers = NSEntityDescription.insertNewObject(forEntityName: "WorkerEntity", into: context!) as! WorkerEntity
         
-        workers.setValue(dictionary["imageURL"] as! Data, forKey: "imageURL")
-        workers.setValue(dictionary["name"] as! String, forKey: "name")
-        workers.setValue(dictionary["lastname"] as! String, forKey: "second_name")
-        workers.setValue(dictionary["birthday"] as! NSDate, forKey: "birthday")
-        workers.setValue(dictionary["company"] as! String, forKey: "company")
+        print(worker.name)
+        
+        if let name = worker.name,
+           let lastname = worker.lastname,
+           let company = worker.company,
+           let birthday = worker.birthday,
+           let imageURL = worker.imageURL {
+            
+            workers.name = name
+            workers.second_name = lastname
+            workers.birthday = birthday
+            workers.company = company
+            workers.imageURL = imageURL
+        }
+        
+//        workers.imageURL = worker.imageURL
+//
+//        workers.second_name = worker.lastname
+//        workers.birthday = worker.birthday
+//        workers.company = worker.company
+        //workers.setValue(worker.name, forKey: "")
         
         do {
             try context?.save()

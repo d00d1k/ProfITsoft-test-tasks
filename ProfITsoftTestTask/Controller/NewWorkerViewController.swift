@@ -12,10 +12,12 @@ import CoreData
 class NewWorkerViewController: UITableViewController {
     
     var selectedCompany: String = "None"
+    var worker = WorkerModel()
+    
     
     @IBAction func saveButton(_ sender: Any) {
         alertMessage()
-        saveWorker()
+        saveData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,18 +42,19 @@ class NewWorkerViewController: UITableViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    private func saveWorker() {
-        
-        let workersDictionary: [String: Any] = [
-        
-            "imageURL": ImageCell.imageFromImageCell,
-            "name": NameCell.nameFromTextField,
-            "lastname": LastnameCell.lastnameFromTextField,
-            "birthday": BirthdayCell.birthdayFromDAyPicker,
-            "company": CompanyCell.chosenCompany
-        ]
-        
-        DataManager.instance.saveData(workersDictionary)
+    private func saveData() {
+
+//        let workersDictionary: [String: Any] = [
+//
+//            "imageURL": ImageCell.imageFromImageCell,
+//            "name": worker.name,
+//            "lastname": LastnameCell.lastnameFromTextField,
+//            "birthday": BirthdayCell.birthdayFromDAyPicker,
+//            "company": CompanyCell.chosenCompany
+//        ]
+//        print(worker.name)
+
+        DataManager.instance.saveData(worker)
     }
 }
  
@@ -67,28 +70,39 @@ extension NewWorkerViewController {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell") as! ImageCell
             
+            cell.configureCell(worker)
+            
             return cell
             
         } else if indexPath.row == 1 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "NameCell") as! NameCell
+            
+            cell.configureCell(worker)
+            
             return cell
             
         } else if indexPath.row == 2 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "LastnameCell") as! LastnameCell
+            
+            cell.configureCell(worker)
+            
             return cell
             
         } else if indexPath.row == 3 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "BirthdayCell") as! BirthdayCell
+            
+            cell.configureCell(worker)
+            
             return cell
             
         } else if indexPath.row == 4 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "CompanyCell") as! CompanyCell
             
-            cell.configureCell(selectedCompany)
+            cell.configureCell(selectedCompany, model: worker)
             cell.accessoryType = .disclosureIndicator
             
             return cell

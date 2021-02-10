@@ -10,20 +10,16 @@ import UIKit
 class LastnameCell: UITableViewCell {
 
     static var lastnameFromTextField = String()
+    var worker: WorkerModel?
     
     @IBOutlet weak var lastnameTextField: UITextField!
     
     @IBAction func getLastnameFromTextField() {
-        LastnameCell.lastnameFromTextField = returnLastnameFromTextfield(optionalName: lastnameTextField?.text)
-        print(LastnameCell.lastnameFromTextField)
+        worker?.lastname = lastnameTextField.text
     }
     
-    func returnLastnameFromTextfield(optionalName: String?) -> String {
+    func configureCell(_ model: WorkerModel) {
         
-        if let name = lastnameTextField.text {
-            return name
-        } else {
-            return "None"
-        }
+        self.worker = model
     }
 }

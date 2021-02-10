@@ -10,11 +10,17 @@ import UIKit
 class BirthdayCell: UITableViewCell {
     
     static var birthdayFromDAyPicker = NSDate()
+    var worker: WorkerModel?
     
     @IBOutlet weak var birthdayOutlet: UIDatePicker!
     
     @IBAction func birthdayDayPicker(_ sender: UIDatePicker) {
         
-        BirthdayCell.birthdayFromDAyPicker = birthdayOutlet.date as NSDate
+        worker?.birthday = birthdayOutlet.date
+    }
+    
+    func configureCell(_ model: WorkerModel) {
+        
+        self.worker = model
     }
 }

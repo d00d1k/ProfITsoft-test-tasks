@@ -10,14 +10,15 @@ import UIKit
 class CompanyCell: UITableViewCell {
     
     static var chosenCompany: String = "None"
+    var worker: WorkerModel?
     
     @IBOutlet weak var companyName: UILabel!
     
-    func configureCell(_ companyName: String) {
+    func configureCell(_ companyName: String, model: WorkerModel) {
         
         self.companyName.text = companyName
-        
-        CompanyCell.chosenCompany = companyName
+        self.worker = model
+        worker?.company = companyName
     }
 }
 
